@@ -45,7 +45,36 @@ class DishUpdateView(generic.UpdateView):
     success_url = reverse_lazy("kitchen_service:dish-list")
 
 
+class DishDeleteView(generic.DeleteView):
+    model = Dish
+    success_url = reverse_lazy("kitchen_service:dish-list")
+
+
+class DishTypeListView(generic.ListView):
+    model = DishType
+    queryset = DishType.objects.all()
+    context_object_name = "dish_type_list"
+    template_name = "kitchen_service/dish_type_list.html"
+    paginate_by = 5
+
+
 class DishTypeCreateView(generic.CreateView):
     model = DishType
     fields = "__all__"
-    success_url = reverse_lazy("kitchen_service:dish-list")
+    template_name = "kitchen_service/dish_type_form.html"
+    success_url = reverse_lazy("kitchen_service:dish-type-list")
+
+
+class DishTypeDeleteView(generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("kitchen_service:dish-type-list")
+
+
+class CookListView(generic.ListView):
+    model = Cook
+
+
+class CookDeleteView(generic.DeleteView):
+    model = Cook
+    success_url = reverse_lazy("kitchen_service:cook-list")
+
