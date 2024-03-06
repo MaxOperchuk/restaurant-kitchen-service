@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_name %}
+  <h1>
+    Dish types   
+    <a href="{% url 'kitchen_service:dish-type-create' %}" class="btn btn-primary">+</a>
+  </h1>
+{% endblock %}
+{% block content %}
+  {% if dish_type_list %}
+    {% for dish_type in dish_type_list %}
+      <ul>
+        <li>Name: {{ dish_type.name }}</li>
+        <li>Description: {{ dish_type.description }}</li>
+        <li>
+          <a href="{% url 'kitchen_service:dish-type-delete' pk=dish_type.pk %}">
+            Delete
+          </a>
+        </li>
+      </ul>
+    {% endfor %}
+  {% else %}  
+    <p>There is no dish types!</p>
+  {% endif %}
+{% endblock %}
