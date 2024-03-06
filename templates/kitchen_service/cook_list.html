@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block page_name %}
+  <h1>Cook list</h1>
+{% endblock %}
+{% block content %}
+  {% if cook_list %}
+    <table class="table">
+    <tr>
+      <th>USERNAME</th>
+      <th>NAME</th>
+      <th>EXPERIENCE</th>
+      <th>DELETE</th>
+    </tr>
+      {% for cook in cook_list %}
+        <tr>
+          <td>{{ cook.username }}</td>
+          <td>{{ cook.first_name }} {{ cook.last_name }}</td>
+          <td>{{ cook.years_of_experience }}</td>
+          <td><a href="{% url 'kitchen_service:cook-delete' pk=cook.pk %}">Delete</a></td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}  
+    <p>There is no dishes!</p>
+  {% endif %}
+{% endblock %}
