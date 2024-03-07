@@ -11,6 +11,10 @@ class DishType(models.Model):
         null=True,
         blank=True,
     )
+    country = models.CharField(
+        null=True,
+        max_length=65
+    )
 
     def __str__(self):
         return self.name
@@ -23,14 +27,16 @@ class Dish(models.Model):
     description = models.TextField()
     price = models.DecimalField(
         max_digits=6,
-        decimal_places=2
+        decimal_places=2,
     )
     dish_type = models.ForeignKey(
         DishType,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name="dishes"
     )
     cooks = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
+        related_name="dishes"
     )
 
     def __str__(self):
