@@ -7,11 +7,6 @@ from kitchen_service.models import Dish, DishType
 class ModelTest(TestCase):
 
     def test_dish_str(self):
-        cook = get_user_model().objects.create_user(
-            username="TestUsername",
-            password="TestPassword123",
-            years_of_experience=3
-        )
         dish_type = DishType.objects.create(
             name="TestType",
             description="TestDescription",
