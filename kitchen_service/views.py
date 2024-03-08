@@ -38,10 +38,6 @@ class DishCreateView(generic.CreateView):
     fields = "__all__"
     success_url = reverse_lazy("kitchen_service:dish-list")
 
-    def form_valid(self, form):
-        form.instance.created_by = self.request.user
-        return super().form_valid(form)
-
     def get_context_data(self, **kwargs):
         context = super(DishCreateView, self).get_context_data(**kwargs)
         all_cooks = Cook.objects.all()
