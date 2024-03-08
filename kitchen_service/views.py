@@ -73,6 +73,12 @@ class DishTypeListView(generic.ListView):
     paginate_by = 5
 
 
+class DishTypeDetailView(generic.DetailView):
+    model = DishType
+    queryset = DishType.objects.all()
+    template_name = "kitchen_service/dish_type_detail.html"
+
+
 class DishTypeCreateView(generic.CreateView):
     model = DishType
     fields = "__all__"
