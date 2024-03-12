@@ -1,0 +1,275 @@
+[
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 8,
+    "fields": {
+      "name": "Japanese",
+      "description": "Experience the exquisite flavors of Japan with our Japanese dishes. From sushi and sashimi to ramen and tempura, our Japanese cuisine offers a taste of authentic Japanese culture.",
+      "country": "Japan"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 9,
+    "fields": {
+      "name": "French",
+      "description": "Indulge in the elegance of French cuisine with our French dishes. From rich sauces and delicate pastries to hearty stews and artisan cheeses, our French cuisine celebrates the art of fine dining.",
+      "country": "France"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 10,
+    "fields": {
+      "name": "Italian",
+      "description": "Savor the flavors of Italy with our Italian dishes. From classic pasta dishes and wood-fired pizzas to decadent desserts and robust wines, our Italian cuisine transports you to the heart of Italy.",
+      "country": "Italy"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 11,
+    "fields": {
+      "name": "Mexican",
+      "description": "Spice up your palate with our Mexican dishes. From sizzling fajitas and cheesy quesadillas to zesty tacos and refreshing margaritas, our Mexican cuisine offers a fiesta of flavors.",
+      "country": "Mexico"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 12,
+    "fields": {
+      "name": "Indian",
+      "description": "Experience the vibrant spices and bold flavors of India with our Indian dishes. From aromatic curries and tandoori meats to fragrant rice dishes and crispy samosas, our Indian cuisine is a feast for the senses.",
+      "country": "India"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Main Course",
+      "description": "A sumptuous selection of main dishes from various cuisines around the globe, ranging from hearty meat-based meals to flavorful vegetarian options.",
+      "country": "International"
+    }
+  },
+  {
+    "model": "kitchen_service.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Appetizer",
+      "description": "Delightful starters designed to tantalize your taste buds, including crispy salads, savory soups, mouthwatering finger foods, and more.",
+      "country": null
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 1,
+    "fields": {
+      "username": "chefjohn",
+      "first_name": "John",
+      "last_name": "Doe",
+      "years_of_experience": 15
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 2,
+    "fields": {
+      "username": "chefjane",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "years_of_experience": 10
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 3,
+    "fields": {
+      "username": "sushimaster",
+      "first_name": "Mike",
+      "last_name": "Miller",
+      "years_of_experience": 20
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 4,
+    "fields": {
+      "username": "sarahchef",
+      "first_name": "Sarah",
+      "last_name": "Smith",
+      "years_of_experience": 8
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 5,
+    "fields": {
+      "username": "davidchef",
+      "first_name": "David",
+      "last_name": "Jones",
+      "years_of_experience": 12
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 6,
+    "fields": {
+      "username": "michaelchef",
+      "first_name": "Michael",
+      "last_name": "Brown",
+      "years_of_experience": 18
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 7,
+    "fields": {
+      "username": "lucychef",
+      "first_name": "Lucy",
+      "last_name": "Wilson",
+      "years_of_experience": 14
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 8,
+    "fields": {
+      "username": "peterchef",
+      "first_name": "Peter",
+      "last_name": "Taylor",
+      "years_of_experience": 11
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 9,
+    "fields": {
+      "username": "michelinchef",
+      "first_name": "Michelin",
+      "last_name": "Star",
+      "years_of_experience": 25
+    }
+  },
+  {
+    "model": "kitchen_service.cook",
+    "pk": 10,
+    "fields": {
+      "username": "gordonchef",
+      "first_name": "Gordon",
+      "last_name": "Ramsay",
+      "years_of_experience": 30
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 1,
+    "fields": {
+      "name": "Spaghetti Carbonara",
+      "description": "Indulge in the rich flavors of our Spaghetti Carbonara, a classic Italian pasta dish featuring al dente spaghetti tossed in a creamy sauce made with eggs, cheese, crispy pancetta, and a hint of black pepper.",
+      "price": "12.99",
+      "dish_type": 1,
+      "cooks": [1, 2, 3]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 2,
+    "fields": {
+      "name": "Caesar Salad",
+      "description": "Savor the freshness of our Caesar Salad, composed of crisp romaine lettuce, crunchy croutons, Parmesan cheese, and a zesty Caesar dressing.",
+      "price": "8.49",
+      "dish_type": 2,
+      "cooks": [2, 4]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 3,
+    "fields": {
+      "name": "Sushi Platter",
+      "description": "Experience the artistry of our Sushi Platter, showcasing a variety of fresh nigiri, maki rolls, and sashimi, skillfully prepared by our master chefs.",
+      "price": "22.99",
+      "dish_type": 1,
+      "cooks": [3, 5]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 4,
+    "fields": {
+      "name": "Filet Mignon",
+      "description": "Indulge in luxury with our Filet Mignon, a tender and juicy cut of beef cooked to perfection, served with a side of roasted vegetables and velvety mashed potatoes.",
+      "price": "28.99",
+      "dish_type": 1,
+      "cooks": [6, 7, 8]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 5,
+    "fields": {
+      "name": "Caprese Salad",
+      "description": "Enjoy the simplicity and freshness of our Caprese Salad, featuring ripe tomatoes, creamy mozzarella cheese, fragrant basil leaves, and a drizzle of balsamic glaze.",
+      "price": "10.99",
+      "dish_type": 2,
+      "cooks": [9, 10]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 6,
+    "fields": {
+      "name": "Lobster Bisque",
+      "description": "Indulge in the luxurious flavors of our Lobster Bisque, a velvety smooth soup made with fresh lobster, rich cream, and aromatic spices, served with crusty bread.",
+      "price": "18.99",
+      "dish_type": 2,
+      "cooks": [1, 3]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 7,
+    "fields": {
+      "name": "Beef Wellington",
+      "description": "Experience culinary excellence with our Beef Wellington, a tender beef tenderloin wrapped in flaky puff pastry, accompanied by a savory mushroom duxelles and a red wine reduction sauce.",
+      "price": "35.99",
+      "dish_type": 1,
+      "cooks": [2, 4, 5]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 8,
+    "fields": {
+      "name": "Shrimp Scampi",
+      "description": "Satisfy your seafood cravings with our Shrimp Scampi, featuring succulent shrimp sautéed in garlic-infused butter, white wine, and lemon juice, served over a bed of angel hair pasta.",
+      "price": "20.99",
+      "dish_type": 1,
+      "cooks": [6, 7, 8]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 9,
+    "fields": {
+      "name": "Bruschetta",
+      "description": "Start your meal on a delightful note with our Bruschetta, featuring toasted baguette slices topped with ripe tomatoes, fresh basil, garlic, and a drizzle of balsamic glaze.",
+      "price": "7.99",
+      "dish_type": 2,
+      "cooks": [9, 10]
+    }
+  },
+  {
+    "model": "kitchen_service.dish",
+    "pk": 10,
+    "fields": {
+      "name": "Chicken Alfredo",
+      "description": "Indulge in comfort with our Chicken Alfredo, featuring tender chicken breast strips tossed in creamy Alfredo sauce, served over fettuccine pasta and garnished with parsley.",
+      "price": "16.99",
+      "dish_type": 1,
+      "cooks": [1, 2, 3]
+    }
+  }
+]
