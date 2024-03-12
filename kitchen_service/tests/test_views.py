@@ -13,6 +13,7 @@ LOGIN_URL = reverse("login")
 
 
 class UnregisteredUserTest(TestCase):
+
     def test_login_required_dish_list_page(self):
         response = self.client.get(DISH_LIST_URL)
         self.assertNotEqual(response.status_code, 200)
@@ -39,6 +40,7 @@ class UnregisteredUserTest(TestCase):
 
 
 class PrivateDishTest(TestCase):
+
     def setUp(self):
         self.user = get_user_model().objects.create_user(
             username="TestUsername",
@@ -107,6 +109,7 @@ class PrivateDishTest(TestCase):
 
 
 class PrivateDishTypeTest(TestCase):
+
     def setUp(self):
         self.user = get_user_model().objects.create_user(
             username="TestUsername",
@@ -166,6 +169,7 @@ class PrivateDishTypeTest(TestCase):
 
 
 class PrivateCookTest(TestCase):
+
     def setUp(self):
         self.user = get_user_model().objects.create_user(
             username="TestUsername",
