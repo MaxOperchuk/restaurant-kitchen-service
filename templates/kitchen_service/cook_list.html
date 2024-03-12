@@ -51,7 +51,7 @@
               <tr>
                 <th>USERNAME</th>
                 <th>NAME</th>
-                <th>YEARS OF EXPERIENCE</th>
+                <th>EXPERIENCE</th>
                 <th>DELETE</th>
               </tr>
                 {% for cook in cook_list %}
@@ -67,7 +67,7 @@
                     {% if cook.years_of_experience %}
                       <td>{{ cook.years_of_experience }}</td>
                       {% else %}
-                      <td>don`t have experience</td>
+                      <td>no experience</td>
                     {% endif %}
                     <td><a href="{% url 'kitchen_service:cook-delete' pk=cook.pk %}">Delete</a></td>
                   </tr>
