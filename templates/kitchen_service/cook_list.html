@@ -1,4 +1,5 @@
 {% extends 'layouts/base_sections.html' %}
+{% load crispy_forms_filters %}
 {% load static %}
 
 {% block body %} class="about-us" {% endblock body %}
@@ -46,6 +47,10 @@
           <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
             <div class="text-center">
             </div>
+            <form method="get" action="" class="form-inline" style="margin-bottom: 20px">
+              {{ search_form|crispy }}
+              <input class="btn btn-secondary" type="submit" value="Search">
+            </form>
             {% if cook_list %}
               <table class="table">
               <tr>

@@ -34,6 +34,9 @@ class Dish(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "dishes"
+
 
 class Cook(AbstractUser):
     years_of_experience = models.IntegerField(null=True)
